@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Exam Performance Indicator</title>
+</head>
+<body>
+    <h1>Student Exam Performance Indicator</h1>
+    <h2>Student Exam Performance Prediction</h2>
+
+    <form action="/predictdata" method="post">
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender">
+            <option value="" selected>Select your Gender</option>
+            <!-- Add options like Male, Female -->
+        </select><br>
+
+        <label for="ethnicity">Race or Ethnicity</label>
+        <select name="ethnicity" id="ethnicity">
+            <option value="" selected>Select Ethnicity</option>
+            <!-- Add ethnicity options -->
+        </select><br>
+
+        <label for="parental_level_of_education">Parental Level of Education</label>
+        <select name="parental_level_of_education" id="parental_level_of_education">
+            <option value="" selected>Select Parent Education</option>
+            <!-- Add options -->
+        </select><br>
+
+        <label for="lunch">Lunch Type</label>
+        <select name="lunch" id="lunch">
+            <option value="" selected>Select Lunch Type</option>
+            <!-- Add options -->
+        </select><br>
+
+        <label for="test_preparation_course">Test preparation Course</label>
+        <select name="test_preparation_course" id="test_preparation_course">
+            <option value="" selected>Select Test_course</option>
+            <!-- Add options -->
+        </select><br>
+
+        <label for="writing_score">Writing Score out of 100</label>
+        <input type="text" name="writing_score" placeholder="Enter your writing score"><br>
+
+        <label for="reading_score">Reading Score out of 100</label>
+        <input type="text" name="reading_score" placeholder="Enter your reading score"><br>
+
+        <input type="submit" value="Predict your Maths Score">
+    </form>
+
+    <h2>THE prediction is {{results}}</h2>
+</body>
+</html>
